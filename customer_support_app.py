@@ -121,7 +121,7 @@ def main():
         st.session_state.language = st.selectbox("Language", ["English", "Spanish", "French"])
         
         st.markdown("---")
-        if st.button("🗑️ Clear Chat", use_container_width=True):
+        if st.button("🗑️ Clear Chat", use_container_width=True): 
             st.session_state.conversation_history = []
             st.session_state.chat = st.session_state.client.chats.create(model=MODEL_ID)
             st.rerun()
